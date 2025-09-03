@@ -1,0 +1,38 @@
+{
+  "name": "@blockialabs/ssi-issuer-sdk",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "ssi-issuer-sdk"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "uuid": "^11.1.0",
+    "@scure/base": "^2.0.0",
+    "@noble/hashes": "^2.0.0",
+    "@blockialabs/ssi-types": "0.0.1",
+    "@blockialabs/ssi-credentials": "0.0.1",
+    "@blockialabs/ssi-storage": "0.0.1",
+    "@blockialabs/ssi-did": "0.0.1",
+    "@blockialabs/ssi-did-key": "0.0.1",
+    "@blockialabs/ssi-utils": "0.0.1",
+    "@blockialabs/ssi-revocation": "0.0.1",
+    "qrcode": "^1.5.4"
+  }
+}

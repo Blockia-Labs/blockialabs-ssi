@@ -2,5 +2,45 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./packages/ssi-utils"
+    },
+    {
+      "path": "./packages/ssi-types"
+    },
+    {
+      "path": "./packages/ssi-crypto"
+    },
+    {
+      "path": "./packages/ssi-storage"
+    },
+    {
+      "path": "./packages/ssi-did"
+    },
+    {
+      "path": "./packages/ssi-did-key"
+    },
+    {
+      "path": "./packages/ssi-did-web"
+    },
+    {
+      "path": "./packages/ssi-credentials"
+    },
+    {
+      "path": "./packages/ssi-schema"
+    },
+    {
+      "path": "./packages/ssi-revocation"
+    },
+    {
+      "path": "./packages/ssi-issuer-sdk"
+    },
+    {
+      "path": "./packages/ssi-verifier-sdk"
+    },
+    {
+      "path": "./packages/ssi-wallet-sdk"
+    }
+  ]
 }

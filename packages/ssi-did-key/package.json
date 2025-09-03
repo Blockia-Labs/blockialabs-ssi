@@ -1,0 +1,30 @@
+{
+  "name": "@blockialabs/ssi-did-key",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "ssi-did-key"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@scure/base": "^2.0.0",
+    "@noble/hashes": "^2.0.0",
+    "@blockialabs/ssi-did": "0.0.1"
+  }
+}

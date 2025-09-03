@@ -1,0 +1,31 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "../ssi-utils"
+    },
+    {
+      "path": "../ssi-types"
+    },
+    {
+      "path": "../ssi-did"
+    },
+    {
+      "path": "../ssi-credentials"
+    },
+    {
+      "path": "../ssi-storage"
+    },
+    {
+      "path": "../ssi-did-key"
+    },
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

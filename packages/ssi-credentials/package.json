@@ -1,0 +1,35 @@
+{
+  "name": "@blockialabs/ssi-credentials",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "ssi-credentials"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@scure/base": "^2.0.0",
+    "@blockialabs/ssi-did": "0.0.1",
+    "@blockialabs/ssi-types": "0.0.1",
+    "@blockialabs/ssi-utils": "0.0.1",
+    "axios": "1.11.0",
+    "jsonld": "^8.3.3",
+    "rdf-canonize": "3.4.0",
+    "json-stable-stringify": "^1.3.0"
+  }
+}
