@@ -74,30 +74,9 @@ describe('WebDIDMethod', () => {
       const signatureType = 'EcdsaSecp256k1Signature2019';
       const did = `did:web:${domain}`;
 
-      const mockDIDDocumentWithProof: IDIDDocument = {
-        '@context': ['https://www.w3.org/ns/did/v1'],
-        'id': did,
-        'controller': did,
-        'verificationMethod': [
-          {
-            id: `${did}#controllerKey`,
-            type: VerificationMethodType.EcdsaSecp256k1VerificationKey2019,
-            controller: did,
-            publicKeyMultibase: expectedPublicKeyMultibase,
-          },
-        ],
-        'authentication': [`${did}#controllerKey`],
-        'assertionMethod': [`${did}#controllerKey`],
-        'keyAgreement': [],
-        'capabilityInvocation': [],
-        'capabilityDelegation': [],
-        'service': [],
-        'proof': expect.anything(),
-      };
-
       (axios.post as jest.Mock).mockResolvedValue({ status: 200 });
 
-      await webDIDMethod.create({
+      const result = await webDIDMethod.create({
         domain,
         publicKeyHex: mockPublicKeyHex,
         signature,
@@ -107,8 +86,18 @@ describe('WebDIDMethod', () => {
 
       expect(axios.post).toHaveBeenCalledWith(
         `https://${domain}/.well-known/did.json`,
-        expect.objectContaining({ proof: expect.anything() }),
+        expect.objectContaining({
+          '@context': ['https://www.w3.org/ns/did/v1'],
+          'id': did,
+          'controller': did,
+          'verificationMethod': [expect.any(Object)],
+          'authentication': [`${did}#controllerKey`],
+          'assertionMethod': [`${did}#controllerKey`],
+          'proof': expect.anything(),
+        }),
       );
+
+      expect(result.didDocument).toHaveProperty('proof');
     });
   });
 
