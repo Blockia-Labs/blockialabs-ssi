@@ -11,12 +11,12 @@ All libraries are located in the `packages/` directory. Each package is independ
 - **ssi-did**: DID (Decentralized Identifier) management
 - **ssi-did-key**: DID Key support
 - **ssi-did-web**: DID Web support
-- **ssi-issuer-sdk**: SDK for credential issuers
 - **ssi-revocation**: Credential revocation
 - **ssi-schema**: Credential schemas
 - **ssi-storage**: Storage solutions for SSI
 - **ssi-types**: Shared types
 - **ssi-utils**: Utility functions
+- **ssi-issuer-sdk**: SDK for credential issuers
 - **ssi-verifier-sdk**: SDK for verifiers
 - **ssi-wallet-sdk**: SDK for wallets
 
@@ -46,12 +46,12 @@ All libraries are located in the `packages/` directory. Each package is independ
 
 ## Publishing
 
-Each package can be published to NPM from its directory:
+This monorepo uses [Nx Release](https://nx.dev/features/manage-releases) for managing package releases and publishing to NPM.
 
-```bash
-cd packages/ssi-credentials
-npm publish
-```
+For detailed instructions on how to configure and use Nx Release, please refer to the official documentation:
+
+- [Nx Release Documentation](https://nx.dev/features/manage-releases)
+- [Release NPM Packages Recipe](https://nx.dev/recipes/nx-release/release-npm-packages)
 
 ## Contributing
 
@@ -59,4 +59,4 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT © Blockialabs
+See [LICENSE](./LICENSE).
