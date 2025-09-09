@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-did",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@blockialabs/ssi-types": "0.0.1",
-    "@blockialabs/ssi-utils": "0.0.1",
+    "@blockialabs/ssi-types": "1.0.0",
+    "@blockialabs/ssi-utils": "1.0.0",
     "cbor": "^10.0.11",
     "jsonld": "^8.3.3"
   }

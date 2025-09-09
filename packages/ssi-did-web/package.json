@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-did-web",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -25,6 +25,6 @@
     "tslib": "^2.3.0",
     "axios": "1.11.0",
     "@scure/base": "^2.0.0",
-    "@blockialabs/ssi-did": "0.0.1"
+    "@blockialabs/ssi-did": "1.0.0"
   }
 }

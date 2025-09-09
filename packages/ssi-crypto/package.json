@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-crypto",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -24,8 +24,8 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-types": "0.0.1",
+    "@blockialabs/ssi-types": "1.0.0",
     "@scure/base": "^2.0.0",
-    "@blockialabs/ssi-storage": "0.0.1"
+    "@blockialabs/ssi-storage": "1.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-issuer-sdk",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -26,13 +26,13 @@
     "uuid": "^11.1.0",
     "@scure/base": "^2.0.0",
     "@noble/hashes": "^2.0.0",
-    "@blockialabs/ssi-types": "0.0.1",
-    "@blockialabs/ssi-credentials": "0.0.1",
-    "@blockialabs/ssi-storage": "0.0.1",
-    "@blockialabs/ssi-did": "0.0.1",
-    "@blockialabs/ssi-did-key": "0.0.1",
-    "@blockialabs/ssi-utils": "0.0.1",
-    "@blockialabs/ssi-revocation": "0.0.1",
+    "@blockialabs/ssi-types": "1.0.0",
+    "@blockialabs/ssi-credentials": "1.0.0",
+    "@blockialabs/ssi-storage": "1.0.0",
+    "@blockialabs/ssi-did": "1.0.0",
+    "@blockialabs/ssi-did-key": "1.0.0",
+    "@blockialabs/ssi-utils": "1.0.0",
+    "@blockialabs/ssi-revocation": "1.0.0",
     "qrcode": "^1.5.4"
   }
 }

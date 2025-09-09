@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-utils",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -26,6 +26,6 @@
     "@scure/base": "^2.0.0",
     "@noble/hashes": "^2.0.0",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-types": "0.0.1"
+    "@blockialabs/ssi-types": "1.0.0"
   }
 }
