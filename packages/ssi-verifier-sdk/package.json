@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-verifier-sdk",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -24,14 +24,17 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
-    "@blockialabs/ssi-did-key": "1.0.0",
-    "@blockialabs/ssi-storage": "1.0.0",
+    "@blockialabs/ssi-did-key": "2.0.0",
+    "@blockialabs/ssi-storage": "2.0.0",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-credentials": "1.0.0",
+    "@blockialabs/ssi-credentials": "2.0.0",
     "qrcode": "^1.5.4",
     "uuid": "^11.1.0",
-    "@blockialabs/ssi-did": "1.0.0",
-    "@blockialabs/ssi-types": "1.0.0",
-    "@blockialabs/ssi-utils": "1.0.0"
+    "@blockialabs/ssi-did": "2.0.0",
+    "@blockialabs/ssi-types": "2.0.0",
+    "@blockialabs/ssi-utils": "2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

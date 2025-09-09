@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-wallet-sdk",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -30,5 +30,8 @@
     "@noble/hashes": "^2.0.0",
     "uuid": "^11.1.0",
     "@noble/ciphers": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
