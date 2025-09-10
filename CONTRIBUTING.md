@@ -14,7 +14,7 @@ Thank you for your interest in contributing! We welcome contributions to our SSI
 ## Code Style
 
 - Follow the existing code style and linting rules.
-- Use conventional commits for commit messages.
+- Use conventional commits for commit messages (ex. <type>(<scope>): your-message).
 
 ## Reporting Issues
 
