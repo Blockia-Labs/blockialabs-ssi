@@ -47,7 +47,7 @@
     "@blockialabs/ssi-utils": "2.0.2",
     "axios": "1.11.0",
     "jsonld": "^8.3.3",
-    "rdf-canonize": "3.4.0",
+    "rdf-canonize": "4.0.1",
     "json-stable-stringify": "^1.3.0"
   },
   "publishConfig": {
