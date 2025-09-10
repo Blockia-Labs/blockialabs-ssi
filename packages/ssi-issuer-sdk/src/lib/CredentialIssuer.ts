@@ -47,7 +47,10 @@ export class CredentialIssuer {
    * @param config Issuer configuration
    * @param options Additional options for the issuer
    */
-  constructor(private readonly config: IssuerConfig, options: IssuerOptions) {
+  constructor(
+    private readonly config: IssuerConfig,
+    options: IssuerOptions,
+  ) {
     this.validateConfig(config);
     this.sessionManager = options.sessionManager;
     this.credentialProcessor = options.credentialProcessor;

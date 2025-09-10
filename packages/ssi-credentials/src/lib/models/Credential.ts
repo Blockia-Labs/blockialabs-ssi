@@ -28,7 +28,10 @@ export class Credential implements ICredential {
   'termsOfUse'?: TermsOfUse[];
   'refreshService'?: RefreshService;
 
-  'constructor'(params: Partial<ICredential>, private schemaService?: SchemaService) {
+  'constructor'(
+    params: Partial<ICredential>,
+    private schemaService?: SchemaService,
+  ) {
     this['@context'] = params['@context'] || this['@context'];
     this.id = params.id || this.id;
     this.type = params.type || this.type;

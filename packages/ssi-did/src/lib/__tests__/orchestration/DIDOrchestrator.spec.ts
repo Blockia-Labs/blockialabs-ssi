@@ -17,7 +17,7 @@ const mockDIDMethod: IDIDMethod = {
     didDocument: { id: 'mockDid' } as IDIDDocument,
     metadata: {} as IDIDDocumentMetadata,
   })),
-  update: jest.fn(async () => ({ id: 'mockDid' } as IDIDDocument)),
+  update: jest.fn(async () => ({ id: 'mockDid' }) as IDIDDocument),
   deactivate: jest.fn(async () => ({ didDocument: null, metadata: {} as IDIDDocumentMetadata })),
 };
 

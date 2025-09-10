@@ -22,7 +22,7 @@ Thank you for your interest in contributing! We welcome contributions to our SSI
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+By contributing, you agree that your contributions will be licensed under the Apache-2.0 License.
 
 ---
 
