@@ -1,7 +1,25 @@
 {
   "name": "@blockialabs/ssi-storage",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity",
+    "storage"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-storage/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-storage"
+  },
+  "description": "A library for storing and retrieving data in decentralized identity systems.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

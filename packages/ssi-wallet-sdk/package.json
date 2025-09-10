@@ -1,7 +1,25 @@
 {
   "name": "@blockialabs/ssi-wallet-sdk",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity",
+    "wallet"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-wallet-sdk/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-wallet-sdk"
+  },
+  "description": "Library that provides a SDK for managing decentralized identity wallets.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

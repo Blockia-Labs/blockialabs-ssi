@@ -1,7 +1,25 @@
 {
   "name": "@blockialabs/ssi-issuer-sdk",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity",
+    "issuer"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-issuer-sdk/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-issuer-sdk"
+  },
+  "description": "A comprehensive SDK for issuing and managing verifiable credentials in decentralized identity systems.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -27,13 +45,13 @@
     "uuid": "^11.1.0",
     "@scure/base": "^2.0.0",
     "@noble/hashes": "^2.0.0",
-    "@blockialabs/ssi-types": "2.0.1",
-    "@blockialabs/ssi-credentials": "2.0.1",
-    "@blockialabs/ssi-storage": "2.0.1",
-    "@blockialabs/ssi-did": "2.0.1",
-    "@blockialabs/ssi-did-key": "2.0.1",
-    "@blockialabs/ssi-utils": "2.0.1",
-    "@blockialabs/ssi-revocation": "2.0.1",
+    "@blockialabs/ssi-types": "2.0.2",
+    "@blockialabs/ssi-credentials": "2.0.2",
+    "@blockialabs/ssi-storage": "2.0.2",
+    "@blockialabs/ssi-did": "2.0.2",
+    "@blockialabs/ssi-did-key": "2.0.2",
+    "@blockialabs/ssi-utils": "2.0.2",
+    "@blockialabs/ssi-revocation": "2.0.2",
     "qrcode": "^1.5.4"
   },
   "publishConfig": {

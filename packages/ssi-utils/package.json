@@ -1,7 +1,26 @@
 {
   "name": "@blockialabs/ssi-utils",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity",
+    "utils",
+    "utilities"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-utils/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-utils"
+  },
+  "description": "A library providing utility functions for decentralized identity and verifiable credentials.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -30,6 +49,6 @@
     "@scure/base": "^2.0.0",
     "@noble/hashes": "^2.0.0",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-types": "2.0.1"
+    "@blockialabs/ssi-types": "2.0.2"
   }
 }

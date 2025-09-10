@@ -1,7 +1,25 @@
 {
   "name": "@blockialabs/ssi-schema",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity",
+    "schema"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-schema/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-schema"
+  },
+  "description": "A library for managing and validating schemas in decentralized identity systems.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

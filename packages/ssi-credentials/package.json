@@ -1,7 +1,24 @@
 {
   "name": "@blockialabs/ssi-credentials",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-credentials/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-credentials"
+  },
+  "description": "A library for creating and managing verifiable credentials in decentralized identity systems.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -25,9 +42,9 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@scure/base": "^2.0.0",
-    "@blockialabs/ssi-did": "2.0.1",
-    "@blockialabs/ssi-types": "2.0.1",
-    "@blockialabs/ssi-utils": "2.0.1",
+    "@blockialabs/ssi-did": "2.0.2",
+    "@blockialabs/ssi-types": "2.0.2",
+    "@blockialabs/ssi-utils": "2.0.2",
     "axios": "1.11.0",
     "jsonld": "^8.3.3",
     "rdf-canonize": "3.4.0",

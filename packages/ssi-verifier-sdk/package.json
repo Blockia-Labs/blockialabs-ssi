@@ -1,7 +1,27 @@
 {
   "name": "@blockialabs/ssi-verifier-sdk",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity",
+    "verify",
+    "verifier",
+    "verifiable presentations"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-verifier-sdk/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-verifier-sdk"
+  },
+  "description": "Library that provides a SDK for verifying verifiable credentials in decentralized identity systems.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -25,15 +45,15 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
-    "@blockialabs/ssi-did-key": "2.0.1",
-    "@blockialabs/ssi-storage": "2.0.1",
+    "@blockialabs/ssi-did-key": "2.0.2",
+    "@blockialabs/ssi-storage": "2.0.2",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-credentials": "2.0.1",
+    "@blockialabs/ssi-credentials": "2.0.2",
     "qrcode": "^1.5.4",
     "uuid": "^11.1.0",
-    "@blockialabs/ssi-did": "2.0.1",
-    "@blockialabs/ssi-types": "2.0.1",
-    "@blockialabs/ssi-utils": "2.0.1"
+    "@blockialabs/ssi-did": "2.0.2",
+    "@blockialabs/ssi-types": "2.0.2",
+    "@blockialabs/ssi-utils": "2.0.2"
   },
   "publishConfig": {
     "access": "public"

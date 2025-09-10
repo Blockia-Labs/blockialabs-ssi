@@ -1,7 +1,24 @@
 {
   "name": "@blockialabs/ssi-did",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "Apache-2.0",
+  "keywords": [
+    "ssi",
+    "verifiable credentials",
+    "VC",
+    "did",
+    "decentralized identity"
+  ],
+  "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-did/README.md",
+  "bugs": {
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
+    "directory": "packages/ssi-did"
+  },
+  "description": "A library for creating and managing DIDs in decentralized identity systems.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -24,8 +41,8 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@blockialabs/ssi-types": "2.0.1",
-    "@blockialabs/ssi-utils": "2.0.1",
+    "@blockialabs/ssi-types": "2.0.2",
+    "@blockialabs/ssi-utils": "2.0.2",
     "cbor": "^10.0.11",
     "jsonld": "^8.3.3"
   },
