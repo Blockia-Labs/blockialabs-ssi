@@ -47,4 +47,9 @@ export interface ISessionManager {
    * Get all sessions
    */
   getAll(): Promise<CredentialOfferSession[]>;
+
+  /**
+   * Get All Sessions By Issuer
+   */
+  getAllByIssuer(issuerId: string): Promise<CredentialOfferSession[]>;
 }

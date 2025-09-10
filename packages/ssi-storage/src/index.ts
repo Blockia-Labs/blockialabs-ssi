@@ -7,3 +7,4 @@ export { InMemoryStorage } from './lib/implementations/InMemoryStorage.js';
 export type { IStorage } from './lib/interfaces/IStorage.js';
 export type { IStorageDriver } from './lib/interfaces/IStorageDriver.js';
 export type { IStorageOptions } from './lib/interfaces/IStorageOptions.js';
+export type {IIssuerSessionStorage} from "./lib/interfaces/IIssuerSessionStorage.js"
