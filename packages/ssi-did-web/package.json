@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-did-web",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -44,7 +44,7 @@
     "tslib": "^2.3.0",
     "axios": "1.11.0",
     "@scure/base": "^2.0.0",
-    "@blockialabs/ssi-did": "2.0.4"
+    "@blockialabs/ssi-did": "2.0.5"
   },
   "publishConfig": {
     "access": "public"
