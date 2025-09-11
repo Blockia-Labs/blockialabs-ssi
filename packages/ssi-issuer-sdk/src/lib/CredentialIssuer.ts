@@ -176,6 +176,14 @@ export class CredentialIssuer {
   }
 
   /**
+   * Get all credential offer sessions by issuer
+   * @param issuerId
+   */
+  public async getAllSessionsByIssuer(issuerId:string):Promise<CredentialOfferSession[]> {
+    return this.sessionManager.getAllByIssuer(issuerId);
+  }
+
+  /**
    * Process notification from wallet
    * @param preAuthorizedCode Pre-authorized code
    * @param issuerState Issuer state for auth code flow

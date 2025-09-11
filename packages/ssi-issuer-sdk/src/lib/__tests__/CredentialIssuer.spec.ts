@@ -116,6 +116,7 @@ describe('CredentialIssuer', () => {
       delete: jest.fn(),
       saveNonce: jest.fn(),
       getAll: jest.fn().mockResolvedValue([mockSession]),
+      getAllByIssuer:jest.fn().mockResolvedValue([mockSession]),
     };
 
     mockCredentialProcessor = {
