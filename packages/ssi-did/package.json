@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-did",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "tslib": "^2.3.0",
-    "@blockialabs/ssi-types": "2.0.2",
-    "@blockialabs/ssi-utils": "2.0.2",
+    "@blockialabs/ssi-types": "2.0.3",
+    "@blockialabs/ssi-utils": "2.0.3",
     "cbor": "^10.0.11",
     "jsonld": "^8.3.3"
   },
