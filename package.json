@@ -16,7 +16,7 @@
     "jsonld": "^8.3.3",
     "jsonwebtoken": "^9.0.2",
     "qrcode": "^1.5.4",
-    "uuid": "^11.1.0"
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",

@@ -47,7 +47,7 @@
     "@scure/bip39": "^2.0.0",
     "@noble/curves": "^2.0.0",
     "@noble/hashes": "^2.0.0",
-    "uuid": "^11.1.0",
+    "uuid": "^13.0.0",
     "@noble/ciphers": "^2.0.0"
   },
   "publishConfig": {
