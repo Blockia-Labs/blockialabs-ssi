@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-verifier-sdk",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -45,15 +45,15 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "jsonwebtoken": "^9.0.2",
-    "@blockialabs/ssi-did-key": "2.0.2",
-    "@blockialabs/ssi-storage": "2.0.2",
+    "@blockialabs/ssi-did-key": "2.0.3",
+    "@blockialabs/ssi-storage": "2.0.3",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-credentials": "2.0.2",
+    "@blockialabs/ssi-credentials": "2.0.3",
     "qrcode": "^1.5.4",
     "uuid": "^11.1.0",
-    "@blockialabs/ssi-did": "2.0.2",
-    "@blockialabs/ssi-types": "2.0.2",
-    "@blockialabs/ssi-utils": "2.0.2"
+    "@blockialabs/ssi-did": "2.0.3",
+    "@blockialabs/ssi-types": "2.0.3",
+    "@blockialabs/ssi-utils": "2.0.3"
   },
   "publishConfig": {
     "access": "public"
