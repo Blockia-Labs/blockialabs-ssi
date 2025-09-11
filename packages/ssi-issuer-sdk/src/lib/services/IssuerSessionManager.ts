@@ -1,13 +1,13 @@
-import { CNonceState } from '../types/credential.js';
+import { CNonceState } from '../types/index.js';
 import { CredentialError, CredentialErrorCode } from '../types/errors.js';
 import { CredentialOfferSession } from '../types/session.js';
-import { ISessionManager, NonceUpdate } from '../interfaces/session-manager.js';
-import { IStorage } from '@blockialabs/ssi-storage';
+import { ISessionManager, NonceUpdate } from '../interfaces/index.js';
+import { IIssuerSessionStorage, IStorage } from '@blockialabs/ssi-storage';
 import { v4 as uuidv4 } from 'uuid';
 
 export class IssuerSessionManager implements ISessionManager {
   constructor(
-    private readonly sessionStorage: IStorage<CredentialOfferSession>,
+    private readonly sessionStorage: IIssuerSessionStorage<CredentialOfferSession>,
     private readonly nonceStorage: IStorage<CNonceState>,
   ) {}
 
@@ -103,9 +103,11 @@ export class IssuerSessionManager implements ISessionManager {
   async getAll(): Promise<CredentialOfferSession[]> {
     const keys = await this.sessionStorage.keys();
     const sessions = await Promise.all(keys.map((k: string) => this.sessionStorage.get(k)));
-    const filtered = sessions.filter((s): s is CredentialOfferSession => !!s);
+    return sessions.filter((s): s is CredentialOfferSession => !!s);
+  }
 
-    return filtered;
+  async getAllByIssuer(issuerId: string): Promise<CredentialOfferSession[]> {
+    return await this.sessionStorage.getAllByIssuer(issuerId);
   }
 
   private async saveSessionWithReferences(session: CredentialOfferSession): Promise<void> {
