@@ -344,10 +344,11 @@ export class CredentialIssuer {
           error_description: 'Invalid or expired transaction ID',
         };
       }
-    } catch {
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
       return {
         error: DeferredCredentialErrorCode.ISSUANCE_FAILED,
-        error_description: 'Failed to retrieve session',
+        error_description: `Failed to retrieve session : ${message}`,
       };
     }
 

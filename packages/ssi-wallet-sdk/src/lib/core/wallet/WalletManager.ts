@@ -63,8 +63,9 @@ export class WalletManager {
   private generateMnemonic(): string {
     try {
       return Wallet.generateMnemonic(this.config.entropySize);
-    } catch {
-      throw new CryptographyError('Failed to generate mnemonic');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Failed to generate mnemonic : ${message}`);
     }
   }
 
@@ -110,8 +111,9 @@ export class WalletManager {
       try {
         const wallet = await this.createWalletFromMnemonic(mnemonic, i, passphrase);
         wallets.push(wallet);
-      } catch {
-        throw new CryptographyError(`Failed to create wallet for account ${i}`);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        throw new CryptographyError(`Failed to generate mnemonic : ${message}`);
       }
     }
 

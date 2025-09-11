@@ -17,8 +17,9 @@ export class CryptoUtils {
 
     try {
       return generateMnemonic(wordlist, entropySize);
-    } catch {
-      throw new CryptographyError('Mnemonic generation failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Mnemonic generation failed : ${message}`);
     }
   }
 
@@ -33,16 +34,18 @@ export class CryptoUtils {
   static async mnemonicToSeed(mnemonic: string, passphrase?: string): Promise<Uint8Array> {
     try {
       return await mnemonicToSeed(mnemonic, passphrase);
-    } catch {
-      throw new CryptographyError('Seed conversion failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Seed conversion failed : ${message}`);
     }
   }
 
   static createMasterKey(seed: Uint8Array): HDKey {
     try {
       return HDKey.fromMasterSeed(seed);
-    } catch {
-      throw new CryptographyError('Master key creation failed');
+    }  catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Master key creation failed : ${message}`);
     }
   }
 
@@ -56,8 +59,9 @@ export class CryptoUtils {
       }
 
       return childKey;
-    } catch {
-      throw new CryptographyError('Child key derivation failed');
+    }  catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Message hashing failed : ${message}`);
     }
   }
 
@@ -65,8 +69,9 @@ export class CryptoUtils {
     try {
       const messageBytes = utf8ToBytes(message);
       return sha256(messageBytes);
-    } catch {
-      throw new CryptographyError('Message hashing failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Message signing failed : ${message}`);
     }
   }
 
@@ -76,8 +81,9 @@ export class CryptoUtils {
       const signature = secp256k1.sign(messageHash, privateKey);
       const signatureBytes = signature;
       return base64url.encode(signatureBytes);
-    } catch {
-      throw new CryptographyError('Message signing failed');
+    }  catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Message signing failed : ${message}`);
     }
   }
 
@@ -102,8 +108,9 @@ export class CryptoUtils {
     try {
       const hash = sha256(publicKey);
       return base64url.encode(hash.slice(0, 16)); // Use first 16 bytes as key ID
-    } catch {
-      throw new CryptographyError('Key ID generation failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Key ID generation failed : ${message}`);
     }
   }
 
@@ -124,8 +131,9 @@ export class CryptoUtils {
         x: base64url.encode(x),
         y: base64url.encode(y),
       };
-    } catch {
-      throw new CryptographyError('JWK conversion failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`JWK conversion failed : ${message}`);
     }
   }
 
@@ -141,8 +149,9 @@ export class CryptoUtils {
       multicodecKey.set(publicKey, multicodecPrefix.length);
 
       return `did:key:z${base64url.encode(multicodecKey)}`;
-    } catch {
-      throw new CryptographyError('DID:key generation failed');
+    }  catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`DID:key generation failed : ${message}`);
     }
   }
 
@@ -174,8 +183,9 @@ export class CryptoUtils {
 
       const signature = this.signMessage(privateKey, message);
       return `${message}.${signature}`;
-    } catch {
-      throw new CryptographyError('JWT key proof creation failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`JWT key proof creation failed: ${message}`);
     }
   }
 }
