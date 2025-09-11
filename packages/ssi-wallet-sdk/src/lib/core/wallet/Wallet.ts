@@ -90,8 +90,9 @@ export class Wallet {
   async signMessage(message: string): Promise<string> {
     try {
       return CryptoUtils.signMessage(this.getPrivateKey(), message);
-    } catch {
-      throw new CryptographyError('Message signing failed');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CryptographyError(`Message signing failed : ${message}`);
     }
   }
 
