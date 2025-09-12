@@ -4,11 +4,15 @@
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
-    "verifiable credentials",
-    "VC",
+    "self-sovereign-identity", 
+    "verifiable-credentials",
+    "openid4vci",
+    "credential-issuance",
     "did",
-    "decentralized identity",
-    "issuer"
+    "blockchain",
+    "typescript",
+    "issuer",
+    "w3c"
   ],
   "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-issuer-sdk/README.md",
   "bugs": {
@@ -19,7 +23,7 @@
     "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
     "directory": "packages/ssi-issuer-sdk"
   },
-  "description": "A comprehensive SDK for issuing and managing verifiable credentials in decentralized identity systems.",
+  "description": "Professional TypeScript SDK for issuing verifiable credentials following OpenID4VCI Draft-17 standards. Complete session management, builder patterns, and deferred issuance support.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

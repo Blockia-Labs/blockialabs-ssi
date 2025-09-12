@@ -4,10 +4,15 @@
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
-    "verifiable credentials",
-    "VC",
     "did",
-    "decentralized identity"
+    "decentralized-identity",
+    "did-core",
+    "w3c",
+    "did-resolution",
+    "did-methods",
+    "typescript",
+    "blockchain",
+    "cryptography"
   ],
   "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-did/README.md",
   "bugs": {
@@ -18,7 +23,7 @@
     "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
     "directory": "packages/ssi-did"
   },
-  "description": "A library for creating and managing DIDs in decentralized identity systems.",
+  "description": "Professional TypeScript SDK for universal DID operations supporting multiple methods (did:key, did:web). W3C DID Core 1.0 compliant with registry-based architecture.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

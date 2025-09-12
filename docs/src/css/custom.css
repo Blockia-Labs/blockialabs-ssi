@@ -1,0 +1,75 @@
+/**
+ * Clean, professional styling for SSI SDK documentation
+ * Standard OSS project documentation theme
+ */
+
+:root {
+  /* Modern, professional color palette */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  
+  /* Clean typography */
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --ifm-font-family-monospace: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --ifm-code-font-size: 95%;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.65;
+  
+  /* Code styling */
+  --ifm-code-background: #f6f8fa;
+  --ifm-pre-background: #f6f8fa;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #dbeafe;
+  
+  --ifm-code-background: #161b22;
+  --ifm-pre-background: #161b22;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Clean typography */
+.markdown h1 {
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  padding-bottom: 0.5rem;
+}
+
+/* Code blocks */
+.prism-code {
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .prism-code {
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+/* Cards */
+.card {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.button {
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}

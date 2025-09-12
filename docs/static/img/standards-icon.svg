@@ -1,0 +1,28 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Main shield/compliance shape -->
+  <path d="M100 30 L140 50 L140 110 Q140 140 100 160 Q60 140 60 110 L60 50 Z" fill="#059669" stroke="#047857" stroke-width="2"/>
+  
+  <!-- Checkmark -->
+  <path d="M80 95 L95 110 L120 80" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Standards badges -->
+  <rect x="40" y="50" width="25" height="12" rx="2" fill="#3b82f6" opacity="0.8"/>
+  <text x="52" y="59" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">W3C</text>
+  
+  <rect x="135" y="60" width="35" height="12" rx="2" fill="#7c3aed" opacity="0.8"/>
+  <text x="152" y="69" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="7" font-weight="bold">OpenID</text>
+  
+  <rect x="45" y="120" width="30" height="12" rx="2" fill="#dc2626" opacity="0.8"/>
+  <text x="60" y="129" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" font-weight="bold">BIP32</text>
+  
+  <!-- Connection lines -->
+  <line x1="65" y1="56" x2="85" y2="70" stroke="#6b7280" stroke-width="1.5" opacity="0.6"/>
+  <line x1="135" y1="66" x2="115" y2="80" stroke="#6b7280" stroke-width="1.5" opacity="0.6"/>
+  <line x1="75" y1="126" x2="95" y2="135" stroke="#6b7280" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Label -->
+  <text x="100" y="185" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Standards Compliant</text>
+</svg>
