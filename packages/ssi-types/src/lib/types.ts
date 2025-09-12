@@ -31,13 +31,13 @@ export interface ISignatureProvider {
    * (software, KMS, HSM, Vault, etc.)
    *
    * @param message - The data to sign (binary or base64/hex string)
-   * @param publicKey - The private key material or reference
+   * @param privateKey - The private key material or reference
    * @param options - Optional provider-specific signing options
    * @returns The signature (string, typically base64 or hex)
    */
   sign(
     message: Uint8Array | string,
-    publicKey: Uint8Array | string | bigint,
+    privateKey: Uint8Array | string | bigint,
     options?: Record<string, unknown>,
   ): Promise<string>;
 

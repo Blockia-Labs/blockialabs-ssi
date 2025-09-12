@@ -34,8 +34,12 @@ export class JWTProofValidator implements IProofValidator {
 
     try {
       await verifySignature(this.signatureProvider, signature, message, publicKeyHex);
-    } catch {
-      throw new CredentialError(CredentialErrorCode.INVALID_PROOF, 'Invalid signature');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new CredentialError(
+        CredentialErrorCode.INVALID_PROOF,
+        `Invalid signature : ${message}`,
+      );
     }
   }
 

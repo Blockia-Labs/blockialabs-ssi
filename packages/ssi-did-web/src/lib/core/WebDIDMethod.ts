@@ -56,8 +56,11 @@ export class WebDIDMethod implements IDIDMethod {
     const didDocument = didDocumentBuilder.buildAndSeal();
     try {
       await axios.post(`https://${options.domain}/.well-known/did.json`, didDocument);
-    } catch {
-      throw new Error(`Failed to save DID Document to domain: ${options.domain}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new Error(
+        `Failed to save DID Document to domain: ${options.domain}, Reason : ${message}`,
+      );
     }
     return { did, didDocument };
   }
@@ -88,8 +91,9 @@ export class WebDIDMethod implements IDIDMethod {
           deactivated: false,
         },
       };
-    } catch {
-      throw new Error(`Failed to fetch DID Document from domain: ${domain}`);
+    }catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new Error(`Failed to fetch DID Document from domain: ${domain}, Reason : ${message}`);
     }
   }
 
@@ -142,8 +146,11 @@ export class WebDIDMethod implements IDIDMethod {
     const domain = did.split(':')[2];
     try {
       await axios.post(`https://${domain}/.well-known/did.json`, updatedDocument);
-    } catch {
-      throw new Error(`Failed to save updated DID Document to domain: ${domain}`);
+    }  catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      throw new Error(
+        `Failed to save updated DID Document to domain: ${domain}, Reason : ${message}`,
+      );
     }
     return updatedDocument;
   }
@@ -200,8 +207,11 @@ export class WebDIDMethod implements IDIDMethod {
       const domain = did.split(':')[2];
       try {
         await axios.post(`https://${domain}/.well-known/did.json`, updatedDocument);
-      } catch {
-        throw new Error(`Failed to save deactivated DID Document to domain: ${domain}`);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        throw new Error(
+          `Failed to save deactivated DID Document to domain: ${domain} Reason : ${message}`,
+        );
       }
       return {
         didDocument: updatedDocument,
