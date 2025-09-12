@@ -5,7 +5,9 @@ import { ISignatureProvider } from '@blockialabs/ssi-types';
 import { IVerifiablePresentation } from '../types/ClaimTypes.js';
 import { VerificationOptions } from '../types/PresentationResponse.js';
 import { verifySignature } from '@blockialabs/ssi-utils';
-
+import { toBytes } from '@noble/hashes/utils';
+import { sha256 } from '@noble/hashes/sha2';
+import { base58 } from '@scure/base';
 /**
  * Specialized validator for verifying Verifiable Presentation proofs
  */
@@ -253,16 +255,16 @@ export class VpProofValidator {
 
       // 9. Verify the signature
       try {
-        // Convert the canonicalVp string to Uint8Array for signature verification
-        const messageBytes = new TextEncoder().encode(canonicalVp);
-
-        // Convert the proof value from base64 to Uint8Array
+        const messageBytes = toBytes(canonicalVp);
+        const messageHash = sha256(messageBytes);
 
         // Extract publicKeyHex from verificationMethod
         const publicKeyHex = await this.extractPublicKeyHex(verificationMethod);
 
         // Use verifySignature for verification
-        await verifySignature(signatureProvider, proof.proofValue, messageBytes, publicKeyHex);
+        await verifySignature(signatureProvider, proof.proofValue, messageHash, publicKeyHex, {
+          skipHashing: true,
+        });
 
         // If verifySignature doesn't throw, the signature is valid
         return { valid: true };
@@ -341,11 +343,25 @@ export class VpProofValidator {
    * @param vpToken The VP token to modify
    * @returns A copy of the VP without proofs
    */
-  private removeProofsFromVp(vpToken: IVerifiablePresentation): Record<string, unknown> {
-    // Create a deep copy without the proof
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const { proof: _, ...vpWithoutProof } = vpToken;
-    return vpWithoutProof;
+  private removeProofsFromVp(vpToken: any): any {
+    // If null or not an object - return as-is
+    if (vpToken === null || typeof vpToken !== 'object') {
+      return vpToken;
+    }
+
+    // Handle arrays
+    if (Array.isArray(vpToken)) {
+      return vpToken.map((item) => this.removeProofsFromVp(item));
+    }
+
+    // Handle objects
+    const result: Record<string, any> = {};
+    for (const [key, value] of Object.entries(vpToken)) {
+      if (key !== 'proof') {
+        result[key] = this.removeProofsFromVp(value);
+      }
+    }
+    return result;
   }
 
   /**
@@ -380,8 +396,14 @@ export class VpProofValidator {
         ? verificationMethod.publicKeyMultibase.slice(1)
         : verificationMethod.publicKeyMultibase;
 
-      const keyBytes = Buffer.from(base58Key, 'base64');
-      return keyBytes.toString('hex');
+      const keyBytes = base58.decode(base58Key);
+      const hexKey = Buffer.from(keyBytes).toString('hex');
+
+      if (hexKey.length === 70) {
+        return hexKey.slice(4); // remove the 2-byte (4 hex chars) prefix
+      } else {
+        return hexKey;
+      }
     } else if (verificationMethod.publicKeyHex) {
       return verificationMethod.publicKeyHex;
     }

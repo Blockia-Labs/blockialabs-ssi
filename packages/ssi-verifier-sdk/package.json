@@ -53,7 +53,9 @@
     "uuid": "^11.1.0",
     "@blockialabs/ssi-did": "2.0.5",
     "@blockialabs/ssi-types": "2.0.5",
-    "@blockialabs/ssi-utils": "2.0.5"
+    "@blockialabs/ssi-utils": "2.0.5",
+    "@noble/hashes": "^1.8.0",
+    "@scure/base": "1.2.6"
   },
   "publishConfig": {
     "access": "public"

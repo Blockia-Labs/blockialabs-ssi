@@ -1,4 +1,4 @@
-import { base64url } from '@scure/base';
+import { base64url, base64 } from '@scure/base';
 import { hexToBytes, utf8ToBytes } from '@noble/hashes/utils.js';
 import { ISignatureProvider } from '@blockialabs/ssi-types';
 
@@ -13,7 +13,10 @@ function toUint8Array(
 ): Uint8Array {
   if (input instanceof Uint8Array) return input;
   if (format === 'hex') return hexToBytes(input);
-  if (format === 'base64') return base64url.decode(input);
+  if (format === 'base64') {
+    const isValidBase64 = Buffer.from(input, 'base64').toString('base64') === input;
+    return isValidBase64 ? base64.decode(input) : base64url.decode(input);
+  }
   return utf8ToBytes(input);
 }
 

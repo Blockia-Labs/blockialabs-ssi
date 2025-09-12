@@ -260,7 +260,7 @@ export class CredentialProcessor {
 
           // Todo: should be signatureType not proofType
           const signatureType = this.getSignatureTypeFromProofType(proof.type.toString());
-          const signatureProvider = this.signatureProviders.get(signatureType);
+          const signatureProvider = this.signatureProviders.get('P256');
           if (!signatureProvider) {
             throw new Error(`No signature provider registered for type: ${signatureType}`);
           }
