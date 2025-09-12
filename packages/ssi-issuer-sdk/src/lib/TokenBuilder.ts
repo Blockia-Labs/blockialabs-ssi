@@ -64,7 +64,12 @@ export class TokenBuilder {
       const { session, isValid, error } = await this.validateTokenRequest(tokenRequest);
 
       if (!isValid || error || !session) {
-        return error!;
+        return (
+          error ?? {
+            error: 'invalid_request',
+            error_description: 'Unknown error during token validation',
+          }
+        );
       }
 
       // Create access token
