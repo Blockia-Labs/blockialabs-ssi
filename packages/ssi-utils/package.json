@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-utils",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -49,6 +49,6 @@
     "@scure/base": "^2.0.0",
     "@noble/hashes": "^2.0.0",
     "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-types": "2.0.2"
+    "@blockialabs/ssi-types": "2.0.4"
   }
 }

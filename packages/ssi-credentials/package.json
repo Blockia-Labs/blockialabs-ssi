@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-credentials",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -42,9 +42,9 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "@scure/base": "^2.0.0",
-    "@blockialabs/ssi-did": "2.0.2",
-    "@blockialabs/ssi-types": "2.0.2",
-    "@blockialabs/ssi-utils": "2.0.2",
+    "@blockialabs/ssi-did": "2.0.4",
+    "@blockialabs/ssi-types": "2.0.4",
+    "@blockialabs/ssi-utils": "2.0.4",
     "axios": "1.11.0",
     "jsonld": "^8.3.3",
     "rdf-canonize": "3.4.0",
