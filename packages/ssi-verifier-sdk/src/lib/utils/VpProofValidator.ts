@@ -5,8 +5,8 @@ import { ISignatureProvider } from '@blockialabs/ssi-types';
 import { IVerifiablePresentation } from '../types/ClaimTypes.js';
 import { VerificationOptions } from '../types/PresentationResponse.js';
 import { verifySignature } from '@blockialabs/ssi-utils';
-import { toBytes } from '@noble/hashes/utils';
-import { sha256 } from '@noble/hashes/sha2';
+import { utf8ToBytes } from '@noble/hashes/utils.js';
+import { sha256 } from '@noble/hashes/sha2.js';
 import { base58 } from '@scure/base';
 /**
  * Specialized validator for verifying Verifiable Presentation proofs
@@ -255,7 +255,7 @@ export class VpProofValidator {
 
       // 9. Verify the signature
       try {
-        const messageBytes = toBytes(canonicalVp);
+        const messageBytes = utf8ToBytes(canonicalVp);
         const messageHash = sha256(messageBytes);
 
         // Extract publicKeyHex from verificationMethod
