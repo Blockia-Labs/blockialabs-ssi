@@ -4,11 +4,15 @@
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
-    "verifiable credentials",
-    "VC",
+    "self-sovereign-identity",
+    "hd-wallet",
+    "bip32",
+    "bip39",
     "did",
-    "decentralized identity",
-    "wallet"
+    "wallet",
+    "secure-storage",
+    "typescript",
+    "cryptography"
   ],
   "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-wallet-sdk/README.md",
   "bugs": {
@@ -19,7 +23,7 @@
     "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
     "directory": "packages/ssi-wallet-sdk"
   },
-  "description": "Library that provides a SDK for managing decentralized identity wallets.",
+  "description": "Professional TypeScript SDK for HD wallets with secure storage, DID management, and BIP32/BIP39 key derivation. Perfect for mobile apps and browser extensions.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

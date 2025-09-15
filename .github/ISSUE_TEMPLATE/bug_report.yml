@@ -1,0 +1,72 @@
+name: Bug Report
+description: Report a bug in the SSI toolkit
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the sections below.
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Affected Package
+      description: Which package has the bug?
+      options:
+        - ssi-credentials
+        - ssi-crypto
+        - ssi-did
+        - ssi-did-key
+        - ssi-did-web
+        - ssi-issuer-sdk
+        - ssi-verifier-sdk
+        - ssi-wallet-sdk
+        - ssi-revocation
+        - ssi-schema
+        - ssi-storage
+        - ssi-types
+        - ssi-utils
+        - Multiple packages
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear description of what the bug is
+      placeholder: Describe what happened and what you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Import package...
+        2. Call function...
+        3. Error occurs...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Your environment details
+      placeholder: |
+        - OS: [e.g. macOS, Ubuntu]
+        - Node.js version: [e.g. 18.17.0]
+        - Package version: [e.g. 2.0.2]
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context about the problem

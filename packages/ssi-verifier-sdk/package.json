@@ -4,13 +4,15 @@
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
-    "verifiable credentials",
-    "VC",
+    "self-sovereign-identity",
+    "verifiable-credentials",
+    "openid4vp",
+    "credential-verification",
+    "presentation-definitions",
     "did",
-    "decentralized identity",
-    "verify",
     "verifier",
-    "verifiable presentations"
+    "typescript",
+    "w3c"
   ],
   "homepage": "https://github.com/Blockia-Labs/blockialabs-ssi/blob/main/packages/ssi-verifier-sdk/README.md",
   "bugs": {
@@ -21,7 +23,7 @@
     "url": "https://github.com/Blockia-Labs/blockialabs-ssi.git",
     "directory": "packages/ssi-verifier-sdk"
   },
-  "description": "Library that provides a SDK for verifying verifiable credentials in decentralized identity systems.",
+  "description": "Professional TypeScript SDK for verifying credentials with OpenID4VP Draft-24 support. Complete presentation definitions, QR codes, and token exchange.",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
