@@ -1,6 +1,6 @@
 # Package Architecture Overview
 
-Understanding the complete Blockialabs SSI package ecosystem and how components work together.
+Understanding the complete Blockia SSI package ecosystem and how components work together.
 
 ## Package Categories
 

@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Blockialabs SSI SDK',
+  title: 'Blockia SSI SDK',
   tagline: 'Professional Self-Sovereign Identity toolkit for developers',
   favicon: 'img/favicon.ico',
 
@@ -58,9 +58,9 @@ const config: Config = {
     // Social card for Blockia SDK
     image: 'img/logo.svg',
     navbar: {
-      title: 'Blockialabs SSI',
+      title: 'Blockia SSI SDK',
       logo: {
-        alt: 'Blockialabs SSI Logo',
+        alt: 'Blockia SSI SDK Logo',
         src: 'img/logo.svg',
       },
       items: [
