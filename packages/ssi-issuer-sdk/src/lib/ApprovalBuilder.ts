@@ -85,20 +85,28 @@ export class ApprovalBuilder {
           error_description: 'Invalid session state',
         };
       }
-
-      // 4. Complete credential issuance
+      // 4. Update the credentialSubject and the validUntil attribute of the request
+      if (this.completeOptions.credentialSubject) {
+        session.pendingCredential.credential.credentialSubject =
+          this.completeOptions.credentialSubject;
+      }
+      if (this.completeOptions.validUntil) {
+        session.pendingCredential.credential.validUntil = this.completeOptions.validUntil;
+      }
+      // 5. Complete credential issuance
       const signedCredential = await this.credentialProcessor.completeIssuance(
         session.pendingCredential,
         this.completeOptions as ICompleteOptions,
       );
 
-      // 5. Update session with issued credential
+      // 6. Update session with issued credential
       await this.sessionManager.createOrUpdate(session.id, {
         issuerState: IssueStatus.CREDENTIAL_ISSUED,
         credentialResponse: signedCredential,
+        pendingCredential:session.pendingCredential
       });
 
-      // 6. Return success response
+      // 7. Return success response
       return {
         credentials: [
           {

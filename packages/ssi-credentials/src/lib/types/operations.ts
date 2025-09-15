@@ -17,6 +17,8 @@ export interface IPrepareOptions {
   domain?: string;
   contextHashes?: Record<string, string>;
   credentialFormat?: CredentialFormatType;
+  credentialSubject?: Record<string, string>;
+  validUntil?: string;
 }
 
 export interface IIssueOptions extends IPrepareOptions {

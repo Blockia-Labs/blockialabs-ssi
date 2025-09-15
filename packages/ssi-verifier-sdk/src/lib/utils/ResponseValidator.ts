@@ -227,7 +227,7 @@ export class ResponseValidator {
    */
   private static async verifyAllCredentials(
     credentialProcessor: CredentialProcessor,
-    vpToken: any,
+    vpToken: IVerifiablePresentation,
     options: VerificationOptions,
   ): Promise<EnhancedVerificationResult> {
     const errors: string[] = [];
@@ -268,10 +268,10 @@ export class ResponseValidator {
         }
 
         // Verify credential is not expired if requested
-        if (credential.expirationDate) {
-          const expirationDate = new Date(credential.expirationDate);
-          if (expirationDate < new Date()) {
-            credErrors.push(`Credential at index ${i} expired on ${expirationDate.toISOString()}`);
+        if (credential.validUntil) {
+          const validUntil = new Date(credential.validUntil);
+          if (validUntil < new Date()) {
+            credErrors.push(`Credential at index ${i} expired on ${validUntil.toISOString()}`);
           }
         }
 
