@@ -55,8 +55,8 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // Social card for Blockia SDK
+    image: 'img/logo.svg',
     navbar: {
       title: 'Blockialabs SSI',
       logo: {
@@ -155,7 +155,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Blockia Labs. Built for Self-Sovereign Identity.`,
+      copyright: `Copyright © 2025 Blockia Labs. Built for Self-Sovereign Identity.`,
     },
     prism: {
       theme: prismThemes.github,
