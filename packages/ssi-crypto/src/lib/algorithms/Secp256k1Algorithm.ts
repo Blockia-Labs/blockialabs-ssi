@@ -32,7 +32,7 @@ export class Secp256k1Algorithm implements ISigningAlgorithm {
       throw new Error('Private key required for signing');
     }
     const signature = secp256k1.sign(message, key.privateKey);
-    return signature;
+    return signature.toBytes('compact');
   }
 
   async verify(signature: Uint8Array, message: Uint8Array, key: Key): Promise<boolean> {

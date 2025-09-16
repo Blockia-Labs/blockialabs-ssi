@@ -22,8 +22,8 @@ export class Secp256k1Provider implements ISignatureProvider {
 
     const privateKeyBytes = this.normalizeSecretKey(privateKey);
 
-    const signatureBytes = secp256k1.sign(messageHash, privateKeyBytes, options);
-    const signatureB64Url = base64url.encode(signatureBytes);
+    const signature = secp256k1.sign(messageHash, privateKeyBytes, options);
+    const signatureB64Url = base64url.encode(signature.toBytes('compact'));
 
     return signatureB64Url;
   }

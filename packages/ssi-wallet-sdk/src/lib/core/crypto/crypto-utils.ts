@@ -1,7 +1,7 @@
 import { HDKey } from '@scure/bip32';
 import { base64url } from '@scure/base';
 import { generateMnemonic, mnemonicToSeed, validateMnemonic } from '@scure/bip39';
-import { wordlist } from '@scure/bip39/wordlists/english.js';
+import { wordlist } from '@scure/bip39/wordlists/english';
 import { secp256k1 } from '@noble/curves/secp256k1.js';
 import { ValidationError, CryptographyError } from '../../utils/errors.js';
 import { ENTROPY_SIZES } from '../../utils/constants.js';
@@ -43,7 +43,7 @@ export class CryptoUtils {
   static createMasterKey(seed: Uint8Array): HDKey {
     try {
       return HDKey.fromMasterSeed(seed);
-    }  catch (error) {
+    } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       throw new CryptographyError(`Master key creation failed : ${message}`);
     }
@@ -59,7 +59,7 @@ export class CryptoUtils {
       }
 
       return childKey;
-    }  catch (error) {
+    } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       throw new CryptographyError(`Message hashing failed : ${message}`);
     }
@@ -79,9 +79,8 @@ export class CryptoUtils {
     try {
       const messageHash = this.hashMessage(message);
       const signature = secp256k1.sign(messageHash, privateKey);
-      const signatureBytes = signature;
-      return base64url.encode(signatureBytes);
-    }  catch (error) {
+      return base64url.encode(signature.toBytes('compact'));
+    } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       throw new CryptographyError(`Message signing failed : ${message}`);
     }
@@ -149,7 +148,7 @@ export class CryptoUtils {
       multicodecKey.set(publicKey, multicodecPrefix.length);
 
       return `did:key:z${base64url.encode(multicodecKey)}`;
-    }  catch (error) {
+    } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       throw new CryptographyError(`DID:key generation failed : ${message}`);
     }

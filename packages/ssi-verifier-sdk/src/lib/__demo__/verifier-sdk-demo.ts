@@ -140,7 +140,7 @@ async function runVerifierSdkDemo() {
           const messageHashBytes = new Uint8Array(messageHash);
 
           const signature = secp256k1.sign(messageHashBytes, issuerPrivateKey);
-          return Buffer.from(signature).toString('hex');
+          return Buffer.from(signature.toBytes('compact')).toString('hex');
         },
         verify: async (signature: Uint8Array, message: Uint8Array, publicKey: Uint8Array) => {
           try {

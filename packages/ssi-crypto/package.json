@@ -41,11 +41,11 @@
     "name": "ssi-crypto"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@noble/curves": "^2.0.0",
+    "@blockialabs/ssi-storage": "2.0.6",
     "@blockialabs/ssi-types": "2.0.6",
-    "@scure/base": "^2.0.0",
-    "@blockialabs/ssi-storage": "2.0.6"
+    "@noble/curves": "^1.9.6",
+    "@scure/base": "1.2.6",
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"

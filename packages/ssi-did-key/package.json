@@ -41,10 +41,10 @@
     "name": "ssi-did-key"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@scure/base": "^2.0.0",
-    "@noble/hashes": "^2.0.0",
-    "@blockialabs/ssi-did": "2.0.6"
+    "@blockialabs/ssi-did": "2.0.6",
+    "@noble/hashes": "^1.8.0",
+    "@scure/base": "1.2.6",
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"
