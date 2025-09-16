@@ -1,6 +1,6 @@
 # Installation
 
-Install Blockialabs SSI libraries in your project.
+Install Blockia SSI libraries in your project.
 
 ## Package Managers
 
@@ -116,7 +116,7 @@ const { WalletManager } = require('@blockialabs/ssi-wallet-sdk');
 // const { CredentialIssuer } = require('@blockialabs/ssi-issuer-sdk');
 // const { VerifierSDK } = require('@blockialabs/ssi-verifier-sdk');
 
-console.log('✅ Blockialabs SSI SDK installed');
+console.log('✅ Blockia SSI SDK installed');
 ```
 
 Run: `node test.js`

@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Blockialabs SSI SDK',
+  title: 'Blockia SSI SDK',
   tagline: 'Professional Self-Sovereign Identity toolkit for developers',
   favicon: 'img/favicon.ico',
 
@@ -55,12 +55,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // Social card for Blockia SDK
+    image: 'img/logo.svg',
     navbar: {
-      title: 'Blockialabs SSI',
+      title: 'Blockia SSI SDK',
       logo: {
-        alt: 'Blockialabs SSI Logo',
+        alt: 'Blockia SSI SDK Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -155,7 +155,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Blockia Labs. Built for Self-Sovereign Identity.`,
+      copyright: `Copyright © 2025 Blockia Labs. Built for Self-Sovereign Identity.`,
     },
     prism: {
       theme: prismThemes.github,
