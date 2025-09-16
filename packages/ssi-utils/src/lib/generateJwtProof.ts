@@ -33,8 +33,8 @@ export async function generateJwtProof(
 
   // TODO: Hash the message if needed, instead of passing the raw bytes
   // verify supports both hashed and non-hashed messages via options skipHashing
-  const signatureBytes = secp256k1.sign(messageBytes, privateKeyBytes);
-  const signatureB64Url = base64url.encode(signatureBytes);
+  const signature = secp256k1.sign(messageBytes, privateKeyBytes);
+  const signatureB64Url = base64url.encode(signature.toBytes('compact'));
 
   return `${message}.${signatureB64Url}`;
 }

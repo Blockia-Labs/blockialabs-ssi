@@ -12,6 +12,6 @@ export class Secp256k1Signer {
     const privateKeyBytes = hexToBytes(privateKeyHex);
 
     const signature = secp256k1.sign(messageHash, privateKeyBytes);
-    return signature;
+    return signature.toBytes('compact');
   }
 }

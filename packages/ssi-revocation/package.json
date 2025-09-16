@@ -41,8 +41,8 @@
     "name": "ssi-revocation"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@blockialabs/ssi-storage": "2.0.6"
+    "@blockialabs/ssi-storage": "2.0.6",
+    "tslib": "^2.3.0"
   },
   "publishConfig": {
     "access": "public"

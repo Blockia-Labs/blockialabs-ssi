@@ -4,7 +4,7 @@
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
-    "self-sovereign-identity", 
+    "self-sovereign-identity",
     "verifiable-credentials",
     "openid4vci",
     "credential-issuance",
@@ -45,18 +45,18 @@
     "name": "ssi-issuer-sdk"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "uuid": "^11.1.0",
-    "@scure/base": "^2.0.0",
-    "@noble/hashes": "^2.0.0",
-    "@blockialabs/ssi-types": "2.0.6",
     "@blockialabs/ssi-credentials": "2.0.6",
-    "@blockialabs/ssi-storage": "2.0.6",
-    "@blockialabs/ssi-did": "2.0.6",
     "@blockialabs/ssi-did-key": "2.0.6",
-    "@blockialabs/ssi-utils": "2.0.6",
+    "@blockialabs/ssi-did": "2.0.6",
     "@blockialabs/ssi-revocation": "2.0.6",
-    "qrcode": "^1.5.4"
+    "@blockialabs/ssi-storage": "2.0.6",
+    "@blockialabs/ssi-types": "2.0.6",
+    "@blockialabs/ssi-utils": "2.0.6",
+    "@noble/hashes": "^1.8.0",
+    "@scure/base": "1.2.6",
+    "qrcode": "^1.5.4",
+    "tslib": "^2.3.0",
+    "uuid": "^11.1.0"
   },
   "publishConfig": {
     "access": "public"

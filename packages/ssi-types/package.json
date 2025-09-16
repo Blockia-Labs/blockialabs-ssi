@@ -45,7 +45,7 @@
     "name": "ssi-types"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@noble/curves": "^2.0.0"
+    "@noble/curves": "^1.9.6",
+    "tslib": "^2.3.0"
   }
 }

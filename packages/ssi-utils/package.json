@@ -45,10 +45,10 @@
     "name": "ssi-utils"
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@scure/base": "^2.0.0",
-    "@noble/hashes": "^2.0.0",
-    "@noble/curves": "^2.0.0",
-    "@blockialabs/ssi-types": "2.0.6"
+    "@blockialabs/ssi-types": "2.0.6",
+    "@noble/curves": "^1.9.6",
+    "@noble/hashes": "^1.8.0",
+    "@scure/base": "1.2.6",
+    "tslib": "^2.3.0"
   }
 }
