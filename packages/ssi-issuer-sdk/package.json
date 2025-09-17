@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-issuer-sdk",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -45,13 +45,13 @@
     "name": "ssi-issuer-sdk"
   },
   "dependencies": {
-    "@blockialabs/ssi-credentials": "2.0.6",
-    "@blockialabs/ssi-did-key": "2.0.6",
-    "@blockialabs/ssi-did": "2.0.6",
-    "@blockialabs/ssi-revocation": "2.0.6",
-    "@blockialabs/ssi-storage": "2.0.6",
-    "@blockialabs/ssi-types": "2.0.6",
-    "@blockialabs/ssi-utils": "2.0.6",
+    "@blockialabs/ssi-credentials": "2.0.7",
+    "@blockialabs/ssi-did-key": "2.0.7",
+    "@blockialabs/ssi-did": "2.0.7",
+    "@blockialabs/ssi-revocation": "2.0.7",
+    "@blockialabs/ssi-storage": "2.0.7",
+    "@blockialabs/ssi-types": "2.0.7",
+    "@blockialabs/ssi-utils": "2.0.7",
     "@noble/hashes": "^1.8.0",
     "@scure/base": "1.2.6",
     "qrcode": "^1.5.4",
