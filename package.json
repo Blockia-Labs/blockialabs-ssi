@@ -31,7 +31,7 @@
     "@types/jest": "^30.0.0",
     "@types/jsonld": "^1.5.15",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "20.19.9",
+    "@types/node": "24.5.2",
     "@types/qrcode": "^1.5.5",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
