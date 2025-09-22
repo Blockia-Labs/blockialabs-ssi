@@ -1,5 +1,6 @@
 import { bytesToHex } from '@noble/hashes/utils.js';
-import { CredentialFormatType, ICredential, SignatureType } from '../types/index.js';
+import { SignatureType } from '@blockialabs/ssi-types';
+import { CredentialFormatType, ICredential } from '../types/index.js';
 import { CredentialProcessor } from '../CredentialProcessor.js';
 import { ISchemaVerifier } from '../interfaces/index.js';
 import { ISignatureProvider } from '@blockialabs/ssi-types';

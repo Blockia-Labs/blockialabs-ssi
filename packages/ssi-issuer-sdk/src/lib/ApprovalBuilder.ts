@@ -1,8 +1,8 @@
+import { SignatureType } from '@blockialabs/ssi-types';
 import { ISessionManager } from './interfaces/index.js';
 import {
   ICompleteOptions,
   CredentialProcessor,
-  SignatureType,
   ProofType,
   ProofPurpose,
 } from '@blockialabs/ssi-credentials';
@@ -103,7 +103,7 @@ export class ApprovalBuilder {
       await this.sessionManager.createOrUpdate(session.id, {
         issuerState: IssueStatus.CREDENTIAL_ISSUED,
         credentialResponse: signedCredential,
-        pendingCredential:session.pendingCredential
+        pendingCredential: session.pendingCredential,
       });
 
       // 7. Return success response

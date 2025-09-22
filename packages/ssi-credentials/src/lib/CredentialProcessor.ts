@@ -1,8 +1,8 @@
 import { base58 } from '@scure/base';
 import { ICredentialFormatHandler, ISchemaVerifier } from './interfaces/index.js';
 import { IDIDResolver, IVerificationMethod } from '@blockialabs/ssi-did';
-import { ISignatureProvider } from '@blockialabs/ssi-types';
-import { verifySignature } from '@blockialabs/ssi-utils';
+import { ISignatureProvider, SignatureType } from '@blockialabs/ssi-types';
+import { getSignatureTypeFromProofType, verifySignature } from '@blockialabs/ssi-utils';
 import {
   CredentialFormatType,
   ICompleteOptions,
@@ -13,7 +13,6 @@ import {
   IProof,
   ProofPurpose,
   ProofType,
-  SignatureType,
   VerificationResult,
 } from './types/index.js';
 
@@ -141,9 +140,7 @@ export class CredentialProcessor {
     const proofType = options.proofType || ProofType.EcdsaSecp256k1Signature2019;
 
     // 2. If verification is requested, verify the signature
-    // Get signature type from options or derive it from proof type
-    // Todo: should be signatureType not proofType
-    const signatureType = options.signatureType || this.getSignatureTypeFromProofType(proofType);
+    const signatureType = options.signatureType || getSignatureTypeFromProofType(proofType);
     const signatureProvider = this.signatureProviders.get(signatureType);
 
     if (!signatureProvider) {
@@ -258,9 +255,8 @@ export class CredentialProcessor {
             };
           }
 
-          // Todo: should be signatureType not proofType
-          const signatureType = this.getSignatureTypeFromProofType(proof.type.toString());
-          const signatureProvider = this.signatureProviders.get('P256');
+          const signatureType = getSignatureTypeFromProofType(proof.type.toString());
+          const signatureProvider = this.signatureProviders.get(signatureType);
           if (!signatureProvider) {
             throw new Error(`No signature provider registered for type: ${signatureType}`);
           }
@@ -327,20 +323,6 @@ export class CredentialProcessor {
         }`,
       );
     }
-  }
-
-  /**
-   * Get signature type from proof type
-   */
-  private getSignatureTypeFromProofType(proofType: string | ProofType): SignatureType {
-    const proofTypeStr = proofType.toString();
-
-    if (proofTypeStr.includes('Secp256k1')) {
-      return 'Secp256k1';
-    } else if (proofTypeStr.includes('JsonWebSignature')) {
-      return 'JsonWebKey';
-    }
-    throw new Error(`Unsupported proof type: ${proofTypeStr}`);
   }
 
   private decodeAndAddKey(

@@ -1,10 +1,11 @@
 import { EnhancedVerificationResult } from './ResponseValidator.js';
 import { IDIDResolver, IVerificationMethod } from '@blockialabs/ssi-did';
-import { IProof, ProofPurpose, SignatureType } from '@blockialabs/ssi-credentials';
+import { IProof, ProofPurpose } from '@blockialabs/ssi-credentials';
+import { SignatureType } from '@blockialabs/ssi-types';
 import { ISignatureProvider } from '@blockialabs/ssi-types';
 import { IVerifiablePresentation } from '../types/ClaimTypes.js';
 import { VerificationOptions } from '../types/PresentationResponse.js';
-import { verifySignature } from '@blockialabs/ssi-utils';
+import { getSignatureTypeFromProofType, verifySignature } from '@blockialabs/ssi-utils';
 import { utf8ToBytes } from '@noble/hashes/utils.js';
 import { sha256 } from '@noble/hashes/sha2.js';
 import { base58 } from '@scure/base';
@@ -208,7 +209,7 @@ export class VpProofValidator {
       let signatureProvider: ISignatureProvider | undefined;
 
       try {
-        signatureType = this.getSignatureTypeFromProofType(proof.type);
+        signatureType = getSignatureTypeFromProofType(proof.type);
         signatureProvider = this.signatureProviders.get(signatureType);
 
         if (!signatureProvider) {
@@ -321,21 +322,6 @@ export class VpProofValidator {
         }`,
       );
     }
-  }
-
-  /**
-   * Get signature type from proof type
-   * @param proofType The proof type to convert
-   * @returns The corresponding signature type
-   */
-  private getSignatureTypeFromProofType(proofType: string): SignatureType {
-    if (proofType.includes('Secp256k1')) {
-      return 'Secp256k1';
-    } else if (proofType.includes('JsonWebSignature')) {
-      return 'JsonWebKey';
-    }
-
-    throw new Error(`Unsupported proof type: ${proofType}`);
   }
 
   /**
