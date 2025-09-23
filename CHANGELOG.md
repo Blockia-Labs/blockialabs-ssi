@@ -1,3 +1,14 @@
+## 2.0.8 (2025-09-23)
+
+### 🩹 Fixes
+
+- **docs:** Setup professional Docusaurus documentation site ([#29](https://github.com/Blockia-Labs/blockialabs-ssi/pull/29))
+- **docs:** remove Docusaurus branding and update to 2025 ([#31](https://github.com/Blockia-Labs/blockialabs-ssi/pull/31))
+
+### ❤️ Thank You
+
+- Panche I. @PancheI
+
 ## 2.0.7 (2025-09-17)
 
 ### 🩹 Fixes
