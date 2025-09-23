@@ -3,6 +3,7 @@ import { ECDSASignature } from '@noble/curves/abstract/weierstrass.js';
 export type KeyFormat = 'JWK' | 'Raw';
 export type KeyType = 'JsonWebKey' | 'Ed25519' | 'Secp256k1';
 export type Signature = Uint8Array | string | ECDSASignature;
+export type SignatureType = 'Secp256r1' | 'Secp256k1' | 'JsonWebKey' | string;
 
 export type JWK = {
   kid?: string;

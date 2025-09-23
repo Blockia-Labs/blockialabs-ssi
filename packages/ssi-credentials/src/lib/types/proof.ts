@@ -1,6 +1,7 @@
 // Todo: Check W3C this should be 'jwt', 'ldp_vp', 'attestation'
 export enum ProofType {
   EcdsaSecp256k1Signature2019 = 'EcdsaSecp256k1Signature2019',
+  EcdsaSecp256r1SignatureKey2019 = 'EcdsaSecp256r1SignatureKey2019',
   JsonWebSignature2020 = 'JsonWebSignature2020',
 }
 

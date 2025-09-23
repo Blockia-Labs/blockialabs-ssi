@@ -1,6 +1,24 @@
 import { base64url, base64 } from '@scure/base';
 import { hexToBytes, utf8ToBytes } from '@noble/hashes/utils.js';
-import { ISignatureProvider } from '@blockialabs/ssi-types';
+import { ISignatureProvider, SignatureType } from '@blockialabs/ssi-types';
+
+/**
+ * Get signature type from proof type
+ * @param proofType The proof type to convert
+ * @returns The corresponding signature type
+ */
+export function getSignatureTypeFromProofType(proofType: string): SignatureType {
+  switch (true) {
+    case proofType.includes('Secp256k1'):
+      return 'Secp256k1';
+    case proofType.includes('Secp256r1'):
+      return 'Secp256r1';
+    case proofType.includes('JsonWebSignature'):
+      return 'JsonWebKey';
+    default:
+      throw new Error(`Unsupported proof type: ${proofType}`);
+  }
+}
 
 /**
  * Convert string or Uint8Array input to Uint8Array.
