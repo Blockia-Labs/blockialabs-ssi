@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@blockialabs/ssi-did": "2.0.8",
-    "@noble/hashes": "^1.8.0",
+    "@noble/hashes": "^2.0.1",
     "@scure/base": "1.2.6",
     "tslib": "^2.3.0"
   },
