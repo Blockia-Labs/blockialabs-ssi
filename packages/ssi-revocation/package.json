@@ -1,6 +1,6 @@
 {
   "name": "@blockialabs/ssi-revocation",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "license": "Apache-2.0",
   "keywords": [
     "ssi",
@@ -41,7 +41,7 @@
     "name": "ssi-revocation"
   },
   "dependencies": {
-    "@blockialabs/ssi-storage": "2.0.7",
+    "@blockialabs/ssi-storage": "2.0.8",
     "tslib": "^2.3.0"
   },
   "publishConfig": {
