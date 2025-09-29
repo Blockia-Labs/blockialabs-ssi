@@ -52,7 +52,7 @@
     "@blockialabs/ssi-storage": "2.0.8",
     "@blockialabs/ssi-types": "2.0.8",
     "@blockialabs/ssi-utils": "2.0.8",
-    "@noble/hashes": "^1.8.0",
+    "@noble/hashes": "^2.0.1",
     "@scure/base": "1.2.6",
     "qrcode": "^1.5.4",
     "tslib": "^2.3.0",
