@@ -8,6 +8,7 @@ import { ENTROPY_SIZES } from '../../utils/constants.js';
 import { JsonWebKey } from '../../types/index.js';
 import { utf8ToBytes, bytesToHex } from '@noble/hashes/utils.js';
 import { sha256 } from '@noble/hashes/sha2.js';
+import bs58 from 'bs58';
 
 export class CryptoUtils {
   static generateMnemonic(entropySize = 256): string {
@@ -147,7 +148,7 @@ export class CryptoUtils {
       multicodecKey.set(multicodecPrefix);
       multicodecKey.set(publicKey, multicodecPrefix.length);
 
-      return `did:key:z${base64url.encode(multicodecKey)}`;
+      return `did:key:z${bs58.encode(multicodecKey)}`;
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       throw new CryptographyError(`DID:key generation failed : ${message}`);
